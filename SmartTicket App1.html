@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+		
+<title>SmartTicket</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+        <meta charset="utf-8">     
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>	
+		<script type="text/javascript" src="cordova.js"></script> 
+        <script type="text/javascript" src="js/index.js"></script>
+	
+ </head>
+<body> 
+	 
+    <!-- Title til Startside -->
+		<h1>SmartTicket</h1>
+    
+	<!-- Billede -->
+        <img src="billetbio.jpg" width="950" height="200">
+	
+	<!-- Body til App Startside -->
+	    <body onload="onLoad()">
+		<h1> Klik Her Paa Skaermen </h1>
+		<ul id="bleDeviceList"> </ul>  
+		<br><br>
+		<div id="debugDiv"></div>
+		<br>
+		<button id ="testButton1" onClick = "test()">InAppBrowser</button>	<br><br>
+ </body>
+<style>
+    body {
+    background-color: white;
+    }
+
+    h1 {
+    color: black;
+    text-align: center;
+    }
+
+    p {
+    font-family: timesnewroman;
+    font-size: 20px;
+    }
+ </style>
+ </html>

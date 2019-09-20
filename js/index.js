@@ -29,7 +29,7 @@ var ConnDeviceId;
 var bleDeviceName;
 var deviceList =[];
 
-setTimeout("window.location.reload();",120000); //reload siden hvert 20. sekund. Dermed genindlæses Bluetooth-liste
+setTimeout("window.location.reload();",20000); //reload siden hvert 20. sekund. Dermed genindlæses Bluetooth-liste
  
 function onLoad(){
 	document.addEventListener('deviceready', onDeviceReady, false);

@@ -8,6 +8,7 @@ function tjekpin(){
 		case"1234":
 			if (indtastetpin == pin2){
 			document.getElementById("udskrivning").innerHTML = "godkendt pin, sender 1 til arduino";
+			data(1);
 		
 		}
 		break;
@@ -15,12 +16,13 @@ function tjekpin(){
 		case"4321":
 			if (indtastetpin == pin3){
 			document.getElementById("udskrivning").innerHTML = "godkendt pin, sender 1 til arduino";
-		
+			data(1);
 		}
 		break;
 		
 		default:
 			document.getElementById("udskrivning").innerHTML = " Forkert pin sender 0";
+			data(0);
 	}
 	
 }
@@ -34,3 +36,7 @@ function del() {
     var tbInput = document.getElementById("pin").value; // pinkode textbox indhold gemems i variable
 document.getElementById("pin").value = tbInput.substr(0, tbInput.length - 1 );// den tager fra starten til men tager ikke den sidste cirfre med (eks 256 = 25) og så fjerne den sidste cifre
 }
+
+function data(txt){
+	messageInput.value = txt;
+}	

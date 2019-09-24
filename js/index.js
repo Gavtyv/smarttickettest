@@ -82,6 +82,7 @@ function conn(){
 		test();
 	if(bleDeviceName == "Beaconsal"){
 		ble.connect(ConnDeviceId, onConnect, onConnError);
+		location.href="indtastpin.html";
 	}
  }
  function onConnect(){//nyt i java

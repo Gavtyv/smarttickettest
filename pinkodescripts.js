@@ -37,6 +37,11 @@ function del() {
 document.getElementById("pin").value = tbInput.substr(0, tbInput.length - 1 );// den tager fra starten til men tager ikke den sidste cirfre med (eks 256 = 25) og så fjerne den sidste cifre
 }
 
+function sendData() { // send data to Arduino
+	 var data = stringToBytes(messageInput.value);
+	ble.writeWithoutResponse(ConnDeviceId, blue.serviceUUID, blue.txCharacteristic, data, onSend, onError);
+}
+
 function data(txt){
 	messageInput.value = txt;
 }	

@@ -55,6 +55,9 @@ function data(txt){//nyt
 function onSend(){ //nyt
 	document.getElementById("sendDiv").innerHTML = "Sent: " + messageInput.value + "<br/>";
 }
+function onError(reason)  {//nyt
+	alert("ERROR: " + reason); // real apps should use notification.alert
+}
 
 function stringToBytes(string) {//nyt
     var array = new Uint8Array(string.length);

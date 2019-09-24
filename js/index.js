@@ -80,7 +80,20 @@ function conn(){
 	document.getElementById("debugDiv").innerHTML += "<br>Debug: <br>"+deviceTouchArr[0]+"<br>"+deviceTouchArr[1]; //for debug:
 	if(bleDeviceName  == "Kasperishere")
 		test();
+	if(bleDeviceName == "Beaconsal"){
+		ble.connect(ConnDeviceId, onConnect, onConnError);
+	}
  }
+ function onConnect(){//nyt i java
+	document.getElementById("statusDiv").innerHTML = " Status: Connected";
+	document.getElementById("bleId").innerHTML = ConnDeviceId;
+	ble.startNotification(ConnDeviceId, blue.serviceUUID, blue.rxCharacteristic, onData, onError);
+ }
+ //failure
+function onConnError(){ // nyt i java
+	alert("Problem connecting");
+	document.getElementById("statusDiv").innerHTML = " Status: Disonnected";
+}
  
 
 function onError(reason)  {

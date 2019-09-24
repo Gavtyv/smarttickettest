@@ -44,4 +44,12 @@ function sendData() { // send data to Arduino
 
 function data(txt){
 	messageInput.value = txt;
+}
+
+function stringToBytes(string) {
+    var array = new Uint8Array(string.length);
+    for (var i = 0, l = string.length; i < l; i++) {
+        array[i] = string.charCodeAt(i);
+    }
+    return array.buffer;
 }	

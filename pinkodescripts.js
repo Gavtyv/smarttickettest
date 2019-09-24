@@ -52,6 +52,10 @@ function data(txt){//nyt
 	messageInput.value = txt;
 }
 
+function onSend(){ //nyt
+	document.getElementById("sendDiv").innerHTML = "Sent: " + messageInput.value + "<br/>";
+}
+
 function stringToBytes(string) {//nyt
     var array = new Uint8Array(string.length);
     for (var i = 0, l = string.length; i < l; i++) {

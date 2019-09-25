@@ -81,7 +81,7 @@ function conn(){
 	if(bleDeviceName  == "Kasperishere")
 		test();
 	if(bleDeviceName == "Beaconsal"){
-		ble.connect(ConnDeviceId, onConnect, onConnError);
+		//ble.connect(ConnDeviceId, onConnect, onConnError);
 		location.href="indtastpin.html";
 	}
  }
@@ -95,7 +95,9 @@ function onConnError(){ // nyt i java
 	alert("Problem connecting");
 	document.getElementById("statusDiv").innerHTML = " Status: Disonnected";
 }
- 
+function data(txt){//nyt 
+messageInput.value = txt;
+} 
 
 function onError(reason)  {
 	alert("ERROR: " + reason); // real apps should use notification.alert

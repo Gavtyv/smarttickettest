@@ -8,8 +8,9 @@ function tjekpin(){
 		case"1234":
 			if (indtastetpin == pin2){
 			document.getElementById("udskrivning").innerHTML = "godkendt pin, sender 1 til arduino";
-			data("1");
-			sendData("1");
+			string p2 = "1";
+			data(p2);
+			sendData(p2);
 			onSend();
 		
 		}
@@ -18,16 +19,18 @@ function tjekpin(){
 		case"4321":
 			if (indtastetpin == pin3){
 			document.getElementById("udskrivning").innerHTML = "godkendt pin, sender 1 til arduino";
-			data("1");
-			sendData("1");
+			string p3 = "1";
+			data(p3);
+			sendData(p3);
 			onSend();
 		}
 		break;
 		
 		default:
 			document.getElementById("udskrivning").innerHTML = " Forkert pin sender 0";
-			data("0");
-			sendData("0");
+			string nopin = "0";
+			data(nopin);
+			sendData(nopin);
 			onSend();
 	}
 	

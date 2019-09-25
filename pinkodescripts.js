@@ -10,7 +10,7 @@ function tjekpin(){
 			document.getElementById("udskrivning").innerHTML = "godkendt pin, sender 1 til arduino";
 			data("1");
 			sendData("1");
-			onSend();
+			
 		
 		}
 		break;
@@ -20,7 +20,7 @@ function tjekpin(){
 			document.getElementById("udskrivning").innerHTML = "godkendt pin, sender 1 til arduino";
 			data("1");
 			sendData("1");
-			onSend();
+			
 		}
 		break;
 		
@@ -28,7 +28,7 @@ function tjekpin(){
 			document.getElementById("udskrivning").innerHTML = " Forkert pin sender 0";
 			data("0");
 			sendData("0");
-			onSend();
+			
 	}
 	
 }

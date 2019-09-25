@@ -30,7 +30,7 @@
         <li class="delete lastitem" onclick = "del()">Del</li>
 		<li class="letter" onclick="tjekpin()">OK</li>
 		<div id = "udskrivning"> </div><br>
-		<br><ul id="bleDeviceList"> </ul> <br>
+		<!--<br><ul id="bleDeviceList"> </ul> <br>-->
 		<br><br>
 		<div id="debugDiv"></div> <!--newstart-->
 		<br>
@@ -38,9 +38,10 @@
 		<div id="bleId">DeviceId:</div> <!--newslut-->
 		
     </ul>
-	<!--<input type="text" id="messageInput" value="Hello"/>-->
-		<!--<br>-->
-		<!--<button id="sendButton" onclick = "sendData()">Send</button>-->
+	<br><ul id="bleDeviceList"> </ul> <br>
+	<input type="text" id="messageInput" value="Hello"/>
+		<br>
+		<button id="sendButton" onclick = "sendData()">Send</button>
 </div>
 <br>
 	<div id="sendDiv"></div>	

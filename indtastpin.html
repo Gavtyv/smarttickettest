@@ -4,8 +4,10 @@
 <head>
 	<link rel = "stylesheet" type = "text/css" href = "formatPin.css">
 		<script type="text/javascript" src="cordova.js"></script>
-        <script type="text/javascript" src="pinkodescripts.js"></script> 	
+        <script type="text/javascript" src="pinkodescripts.js"></script>
+		<script type="text/javascript" src="pinkodearduinoscripts.js"></script> 		
 </head>
+<body onload="onLoad()"> <!--new-->
 <b>Pinkode til sal</b><br>
 
 
@@ -28,6 +30,12 @@
         <li class="delete lastitem" onclick = "del()">Del</li>
 		<li class="letter" onclick="tjekpin()">OK</li>
 		<div id = "udskrivning"> </div><br>
+		<ul id="bleDeviceList"> </ul>  
+		<br><br>
+		<div id="debugDiv"></div> <!--newstart-->
+		<br>
+		<div id="statusDiv">Status: Disconnected</div>
+		<div id="bleId">DeviceId:</div> <!--newslut-->
 		
     </ul>  
 </div>

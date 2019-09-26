@@ -26,7 +26,7 @@ Servo myservo;
 /*=========================================================================*/
 
 //Erklæring af globale variabler
-int redPin = 5; rød diode på pin5
+int redPin = 5; //rød diode på pin5
 int greenPin = 6; // grøn diode på pin 6
 int bluePin = 3; // Blå diode på pin 3
 #define COMMON_ANODE //uncomment this line if using a Common Anode LED
@@ -198,7 +198,7 @@ void loop(void)
       c = " ";
     }
 
-     if (c == " "); //ingen data sendt og arduino har ikke modtaget noget nyt data fra app
+     if (c!= "1" && "0") //ingen data sendt og arduino har ikke modtaget noget nyt data fra app
     {
       myservo.write(0);
       Serial.println();
